@@ -15,7 +15,7 @@ st.write("The Customer Churn Prediction App is an internal tool for bank staff t
 st.write("Kindly enter the customer details to check whether they are likely to churn.")
 
 # Collect user input
-CreditScore = st.number_input("Credit Score (customer's credit score)", min_value=300, max_value=900, value=650)
+CreditScore = st.number_input("Credit Scores (customer's credit score)", min_value=300, max_value=900, value=650)
 Geography = st.selectbox("Geography (country where the customer resides)", ["France", "Germany", "Spain"])
 Age = st.number_input("Age (customer's age in years)", min_value=18, max_value=100, value=30)
 Tenure = st.number_input("Tenure (number of years the customer has been with the bank)", value=12)
@@ -27,7 +27,7 @@ EstimatedSalary = st.number_input("Estimated Salary (customer’s estimated sala
 
 # Convert categorical inputs to match model training
 input_data = pd.DataFrame([{
-    'CreditScores': CreditScore,
+    'CreditScore': CreditScore,
     'Geography': Geography,
     'Age': Age,
     'Tenure': Tenure,
